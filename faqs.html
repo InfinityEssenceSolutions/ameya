@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ameya Plantations</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/Plantation.jpg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+        .tab {
+            cursor: pointer;
+            padding: 10px 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .tab.active {
+            color: #006d5b;
+            border-bottom: 2px solid #006d5b;
+        }
+        .faq-section {
+            display: none;
+        }
+        .faq-section.active {
+            display: block;
+        }
+        .faq-item {
+            border-top: 1px solid #006d5b;
+            padding: 15px 0;
+            cursor: pointer;
+            position: relative;
+            text-align: left;
+        }
+        .faq-question {
+            font-size: 16px;
+            margin: 0;
+            font-weight: bold;
+            color: #333;
+        }
+        .faq-answer {
+            display: none;
+            padding-top: 10px;
+            color: #333;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-item:after {
+            content: "▼";
+            font-size: 12px;
+            position: absolute;
+            right: 0;
+            top: 20px;
+            color: #333;
+        }
+        .faq-item.active:after {
+            content: "▲";
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white sticky-top" style = "height: 130px">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
+                <a href="index.html" class="navbar-brand">
+                    <img class="img-fluid" src="img/logo4.jpeg" style = "height: 120px;" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">Our Team</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-togg" data-bs-toggle="dropdown">Projects</a>
+                            <div class="dropdown-menu bg-light rounded-0 m-0">
+                                <a href="project_page.html" class="dropdown-item">Ameya - Vinukonda</a>
+                            </div>
+                        </div>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="faqs.html" class="nav-item nav-link">FAQs</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-2 text-white mb-4 animated slideInDown"></h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#"></a></li>
+                    <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
+                    <!-- <li class="breadcrumb-item text-white" aria-current="page"></li> -->
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-xxl py-5" id = "faqs">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- <div class="col-lg-12">
+                    <div class="row g-3">
+                        <div class="col-6 text-end">
+                            <img class="img-fluid bg-white w-100 mb-3 wow fadeIn" data-wow-delay="0.1s" src="img/team_1.jpg" alt="">
+                            <img class="img-fluid bg-white w-50 wow fadeIn" data-wow-delay="0.2s" src="" alt="">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid bg-white w-50 mb-3 wow fadeIn" data-wow-delay="0.3s" src="" alt="">
+                            <img class="img-fluid bg-white w-100 wow fadeIn" data-wow-delay="0.4s" src="img/team_2.jpg" alt="">
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-lg-12 wow fadeIn" id = "faqs" data-wow-delay="0.5s">
+                    <div class="section-title">
+                        <h1 class="text-primary">Frequently Asked Questions</h1>
+                        <!-- <h1 class="display-6">The success history of Ameya Plantations in 25 years</h1> -->
+                    </div>
+                    <div class="tabs">
+                        <div class="tab active" onclick="showTab('general')"><h5>General</h5></div>
+                        <div class="tab" onclick="showTab('investment')"><h5>Investment</h5></div>
+                        <div class="tab" onclick="showTab('legal')"><h5>Legal</h5></div>
+                    </div>
+
+                    <div id="general" class="faq-section active">
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">What is a managed sandalwood plantation?</p>
+                            <div class="faq-answer">A managed sandalwood plantation is a professionally supervised agricultural operation where sandalwood trees are cultivated, monitored, and harvested under optimal conditions. These plantations employ advanced farming techniques, regular monitoring, and expert management to ensure the growth of high-quality sandalwood.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">Why should I invest in a managed sandalwood plantation?</p>
+                            <div class="faq-answer">Investing in a managed sandalwood plantation offers long-term returns due to the high value of sandalwood. Managed plantations reduce risks by ensuring proper cultivation practices, consistent tree health monitoring, and secure harvesting processes, which maximize the yield and quality of the heartwood.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">How long does it take for sandalwood trees to mature?</p>
+                            <div class="faq-answer">Sandalwood trees typically take 15 years to reach maturity, at which point they produce high-quality heartwood. The timeline may vary depending on environmental conditions and the specific care practices employed.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">What kind of care do sandalwood trees require?</p>
+                            <div class="faq-answer">Sandalwood trees require specific care, including proper soil management, regular watering, pest control, pruning, and monitoring for diseases. Managed plantations ensure these practices are followed rigorously to promote healthy tree growth and optimal heartwood development.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">What makes the heartwood of sandalwood trees valuable?</p>
+                            <div class="faq-answer">The heartwood of sandalwood trees is highly valued for its aromatic oil, which is used in perfumes, incense, and traditional medicines. The quality of the heartwood, determined by its oil content and aroma, significantly affects its market value.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">How does the plantation ensure sustainability?</p>
+                            <div class="faq-answer">Managed sandalwood plantations employ sustainable practices such as responsible harvesting, replanting, and soil management to maintain ecological balance. These practices help ensure the long-term viability of the plantation and its surrounding environment.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">Can I visit the plantation where my trees are grown?</p>
+                            <div class="faq-answer">
+                                Yes, Ameya plantations offer investors the opportunity to visit the site, observe the growth process, and learn more about the cultivation techniques used. This transparency helps build trust and allows you to witness the progress of your investment.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">What risks are associated with sandalwood plantation investments?</p>
+                            <div class="faq-answer">While managed plantations mitigate many risks, some potential concerns include climate variability, pests, and market fluctuations. However, expert management, regular monitoring, and advanced farming techniques are employed to minimize these risks and protect your investment.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">How does the plantation ensure a consistent water supply and operational continuity?</p>
+                            <div class="faq-answer">Ameya plantations has 4-acre water pond with a depth of 15 feet, replenished daily via borewells and water pipelines connected to a nearby canal. This ensures a reliable water supply, crucial for the health of the sandalwood trees. Additionally, the plantation has power backup through generators to maintain continuous operations.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">Who manages the plantation, and what expertise supports it?</p>
+                            <div class="faq-answer">The plantation is managed by seasoned entrepreneurs with proven success in real estate and hospitality ventures. The sandalwood cultivation process is overseen by experts in wood sciences from the Institute of Wood Science and Technology (IWST), ensuring that the trees are grown under optimal conditions. Additionally, dedicated plant supervisors manage specific units to ensure proper water supply, plant health, and weed management.</div>
+                        </div>
+                        <!-- Add more FAQ items as needed -->
+                    </div>
+
+                    <div id="investment" class="faq-section">
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">What returns can investors expect from their investment ?</p>
+                            <div class="faq-answer">Each unit (0.25 acre) has 100 sandalwood trees, and each tree is capable of producing up to 50 kilograms of valuable heartwood. Currently, the market price for sandalwood heartwood ranges from INR 15,000 to 25,000 per kilogram, with forecasts indicating a potential doubling of prices over the next decade. This projection underscores the significant long-term return potential of this investment.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">How do Investors participate in this opportunity?</p>
+                            <div class="faq-answer">Investors can purchase one or more units within the plantation. Each unit includes 100 sandalwood trees and covers 0.25 acres. You can choose the number of units that align with your investment goals. The land is registered to investor with full ownership, while Ameya manages the plantation.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">What revenue can investor expect from their investment, and how is it shared?</p>
+                            <div class="faq-answer">Upon harvest, the revenue generated from the sale of heartwood is shared between the investor and Ameya Plantations. Investors receive 60% of the revenue, while Ameya retains 40% for managing and maintaining the plantation. This revenue-sharing model ensures that both parties benefit from the plantation’s success.</div>
+                        </div>
+                        <!-- Add more FAQ items for the "Investment" section as needed -->
+                    </div>
+
+                    <div id="legal" class="faq-section">
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">Will Ameya provide all legal documents of the land for investor verification ?</p>
+                            <div class="faq-answer">Yes, all legal documents will be made available upon signing the Letter of Intent (LOI), and Ameya will arrange for the verification of original documents. Our legal team will guide you through the entire process. The advance payment made during the LOI stage is fully refundable. You will have 15 days from the date of signing the LOI to review all the documentation. However, the LOI remains valid for 45 days. If, for any reason, you choose to withdraw from the transaction within the initial 15-day period, the full amount paid at the time of signing the LOI will be refunded to you.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">Is the unit sale and ownership for the buyer a freehold or leasehold ?</p>
+                            <div class="faq-answer">The land ownership is entirely freehold, allowing the owner full rights to sell their land to anyone without restrictions. There are no conditions in the service agreement that limit this. Once a No Objection Certificate (NOC) is obtained for the clearance of AMC charges, the co-farmer is free to transfer the property in any manner they choose, but consistent with revenue sharing and leasing agreements.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">Can you still invest in agricultural land in Andhra pradesh even if you are not a resident of Andhra pradesh</p>
+                            <div class="faq-answer">Yes. According to the Andhra Pradesh Land Reforms any resident citizen of India to own agricultural land in Andhra Pradesh. However, there is a ceiling to the total agricultural land that can be held by an individual in their name which needs to be managed by investor themselves.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">Will Ameya buyback the units from investors ?</p>
+                            <div class="faq-answer">Ameya will assist the investor in reselling their units. More details on this would be out soon. </div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">What will happen to the land if Ameya goes out of business</p>
+                            <div class="faq-answer">Ameya is backed by strong investors, has been a profitable venture since its inception, self-sustainable with no long-term debt ensuring good financial stability.also have a strong credit rating. Our main objective is to protect the interests of landowners and hence a managing committee or farmland owners society will be set up in due course, which operates independent of Ameya, and in an untoward situation of dissolution of Ameya, the society can continue to operate the farm.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">What are the tax benefits on investments in Agricultural farmlands ?</p>
+                            <div class="faq-answer">Sale of rural agricultural land is not taxable provided the land used for cultivation qualifies as agricultural land. Also earned income from the sale of its crops in rural agricultural land  is not taxable under section 10(1) of the Income Tax Act. Investors are recommended to do their own research and talk to their financial advisors.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">Are there any restrictions to selling my Units ?</p>
+                            <div class="faq-answer">Units purchased are freehold assets, giving you the flexibility to exit your investment at any time. For each project, we establish a society responsible for managing and maintaining essential common areas, such as borewells, water tanks, access paths, and security. This ensures that all farm plot owners have access to these critical amenities. When a resale occurs, the new purchaser must join the society and obtain the Eco Farm Life Membership. This process is similar to the operations of any other society and is encouraged to ensure the continued benefit and seamless operation for all members.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">What is the process for reselling the units ?</p>
+                            <div class="faq-answer">Reselling your units is straightforward, allowing you to transfer the property to any third party without difficulty. The new owner will automatically join the existing landowners' association and continue the contract with Ameya for the remainder of the term. However, before finalizing the sale, you must ensure that all dues to Ameya are fully paid and obtain a No Objection Certificate (NOC) from an authorized Ameya representative.</div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <p class="faq-question">Can the sandalwood be sold separately by the investor at the time of harvest?</p>
+                            <div class="faq-answer">Yes, investors have the option to sell the timber independently of the services provided by Ameya. However, it is essential that the investor ensures no damage is caused to adjacent properties or the larger farmland. The investor must also guarantee the safety and security of all workers on-site and comply with any regulations applicable during the harvest or felling of timber. Additionally, Ameya can assist with the sale of timber at an additional cost if requested by the investor</div>
+                        </div>
+
+                        <!-- Add more FAQ items for the "Legal" section as needed -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Footer Start -->
+
+    <!-- Footer End -->
+
+     <!-- Copyright Start -->
+     <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="fw-medium" href="#">Ameya Plantations</a>, All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a class="fw-medium" href="">IES</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            const sections = document.querySelectorAll('.faq-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        function toggleFAQ(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
