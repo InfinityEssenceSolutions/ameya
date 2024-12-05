@@ -30,7 +30,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-
     <style>
         /* Adjust the carousel height */
         #header-carousel .carousel-item {
@@ -85,6 +84,11 @@
         .zoom-overlay.show img {
             transform: scale(1);
         }
+        video {
+    display: block;
+    visibility: visible;
+}
+
     </style>
 </head>
 
@@ -97,12 +101,12 @@
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid bg-white sticky-top" style = "height: 130px">
+
+    <div class="container-fluid bg-white sticky-top" style="height: 130px;">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
                 <a href="index.html" class="navbar-brand">
-                        <img class="img-fluid" src="img/logo4.jpeg" style = "height: 120px;" alt="Logo">
-                        <!-- <img class="img-fluid" src="img/logo2.jpeg" style = "height: 135px;" alt="Logo"> -->
+                    <img class="img-fluid" src="img/logo4.jpeg" style="height: 120px;" alt="Logo">
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -112,7 +116,7 @@
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">Our Team</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-togg" data-bs-toggle="dropdown">Projects</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
                             <div class="dropdown-menu bg-light rounded-0 m-0">
                                 <a href="project_page.html" class="dropdown-item">Ameya - Vinukonda</a>
                             </div>
@@ -125,6 +129,7 @@
             </nav>
         </div>
     </div>
+
     <!-- Navbar End -->
 
 
@@ -134,7 +139,9 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <!-- <img class="w-100" src="img/banner_1.jpg" alt="Image"> -->
-                    <video class="w-100" src="img/video.mp4" alt="Success Story of Building an Online Store" autoplay muted loop></video>
+                    <video class="w-100" src="img/video.mp4" autoplay muted loop playsinline preload="auto">
+                        Your browser does not support the video tag.
+                    </video>
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -604,7 +611,7 @@
     </script>
 
     <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
@@ -613,6 +620,9 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
